@@ -25,7 +25,8 @@ $f=$_GET["name"];
 $fd=fopen("./vote/$f", "r");
 $i=0;
 $count=0;
-while($char=fread($fd, "1")) {
+while(true) {
+	$char=fread($fd, "1")
 	//echo $char;
 	if ($char == "<") {
 		$count=0;
@@ -55,7 +56,8 @@ if ($char != "/") {
 echo "<form action='show-vote2.php?title=$f' method='post'>";
 while(true) {
 	$i=$i+1;
-	while($char=fread($fd, "1")) {
+	while(true) {
+		$char=fread($fd, "1")
 		//echo $char;
 		if ($char == "<") {
 			$count=0;

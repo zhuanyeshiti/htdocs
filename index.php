@@ -13,6 +13,10 @@ function jumpvap()
 {
 	window.location.href="./vap/vap.php";
 }
+function jumpnavig()
+{
+	window.location.href="./navig/navig.php";
+}
 function clickdir(e)
 {
 	//var id = document.getElementById(e.id).style.display = "none";
@@ -51,6 +55,7 @@ function clickdir(e)
 </body>
 <button class="button" style="width:60px" type="button" onclick="jumpwrite()">write</button>
 <button style="float:left;width:60px;" type="button" onclick="jumpvap()">vap</button>
+<button style="float:left;width:60px;position:relative;top:25px;left:-60px" type="button" onclick="jumpnavig()">vap2</button>
 <!--br/-->
 <div style="width:90%;height:90%;margin:auto;text-align:center;background:#0ff">
 <!--a href="./article1.html">article1</a>
@@ -72,7 +77,7 @@ $i=0;
 $j=0;
 $files=array();
 while($d=readdir($dir)) {
-	if(is_dir($d) && (($d!=".")&&($d!="..")&&($d!="vap"))) {
+	if(is_dir($d) && (($d!=".")&&($d!="..")&&($d!="vap")&&($d!="navig"))) {
 		//echo $d;
 		//echo "</br>";
 		$i++;
@@ -100,7 +105,7 @@ $ii=1;
 while($d=$files[$ii]) {
 	//echo $d;
 	$ii++;
-	if(is_dir($d) && (($d!=".")&&($d!="..")&&($d!="vap"))) {
+	if(is_dir($d) && (($d!=".")&&($d!="..")&&($d!="vap")&&($d!="navig"))) {
 		$value1++;
 		$value2=0;
 		if ($value1 == 1) {

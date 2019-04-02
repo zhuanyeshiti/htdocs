@@ -98,14 +98,16 @@ $ft=fopen("./vote/$f", "r");
 $itmp=0;
 $count=0;
 $iarray=array();
-while($char=fread($ft, "1")) {
+while(true) {
+	$char=fread($ft, "1")
 	if ($char == "/") {
 		break;
 	}
 }
 while(true) {
 	$itmp=$itmp+1;
-	while($char=fread($ft, "1")) {
+	while(true) {
+		$char=fread($ft, "1")
 		if ($char == "<") {
 			$count=0;
 		}
@@ -144,7 +146,8 @@ fclose($ft);
 $fd=fopen("./vote/$f", "r");
 $i=0;
 $count=0;
-while($char=fread($fd, "1")) {
+while(true) {
+	$char=fread($fd, "1")
 	//echo $char;
 	if ($char == "<") {
 		$count=0;
@@ -173,7 +176,8 @@ if ($char != "/") {
 
 while(true) {
 	$i=$i+1;
-	while($char=fread($fd, "1")) {
+	while(true) {
+		$char=fread($fd, "1")
 		//echo $char;
 		if ($char == "<") {
 			$count=0;
