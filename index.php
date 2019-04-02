@@ -77,7 +77,7 @@ $i=0;
 $j=0;
 $files=array();
 while($d=readdir($dir)) {
-	if(is_dir($d) && (($d!=".")&&($d!="..")&&($d!="vap")&&($d!="navig"))) {
+	if(is_dir($d) && (($d!=".")&&($d!="..")&&($d!="vap")&&($d!="navig")&&($d!=".git"))) {
 		//echo $d;
 		//echo "</br>";
 		$i++;
@@ -105,7 +105,7 @@ $ii=1;
 while($d=$files[$ii]) {
 	//echo $d;
 	$ii++;
-	if(is_dir($d) && (($d!=".")&&($d!="..")&&($d!="vap")&&($d!="navig"))) {
+	if(is_dir($d) && (($d!=".")&&($d!="..")&&($d!="vap")&&($d!="navig")&&($d!=".git"))) {
 		$value1++;
 		$value2=0;
 		if ($value1 == 1) {
